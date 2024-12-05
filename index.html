@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/1.0.0/flipclock.min.css">
+    <title>Systems of Equations - Substitution Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            min-height: 100px;
+        }
+        .flipped {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .resources-section {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Systems of Equations - Practice with Substitution</h1>
+    <p>Show your work and do your best! Click on each card to see the solution.</p>
+
+    <div class="card-container">
+        <!-- Generate cards for each problem -->
+        <!-- Each card should be dynamically created -->
+        <div class="card" onclick="flipCard(this)">
+            <div class="card-content" data-problem="1">Problem 1: Solve y = 6x - 11 and -2x - 3y = -7</div>
+            <div class="card-content" style="display: none;">Answer: (2, 1)</div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+            <div class="card-content" data-problem="2">Problem 2: Solve 2x - 3y = -1 and y = x - 1</div>
+            <div class="card-content" style="display: none;">Answer: (4, 3)</div>
+        </div>
+        <!-- Add 18 more cards here following the same structure -->
+    </div>
+
+    <!-- Placeholder for adding external links (resources, guides) -->
+    <div class="resources-section">
+        <h3>External Resources and Guides</h3>
+        <!-- Example link to add -->
+        <!-- <a href="LINK_URL_HERE" target="_blank">Resource Name Here</a> -->
+    </div>
+
+    <!-- Placeholder for adding an image if desired -->
+    <div class="image-section">
+        <!-- <img src="IMAGE_URL_HERE" alt="Description of Image" style="max-width: 100%; height: auto; margin-top: 20px;"> -->
+    </div>
+
+    <script>
+        function flipCard(card) {
+            const frontContent = card.children[0];
+            const backContent = card.children[1];
+            if (frontContent.style.display === "none") {
+                frontContent.style.display = "flex";
+                backContent.style.display = "none";
+                card.classList.remove('flipped');
+            } else {
+                frontContent.style.display = "none";
+                backContent.style.display = "flex";
+                card.classList.add('flipped');
+            }
+        }
+    </script>
+</body>
+</html>
